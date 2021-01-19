@@ -1,7 +1,7 @@
 {
   "name": "prisma-graphql",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple GraphQL Blog server",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx)\"",
@@ -14,7 +14,6 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
@@ -26,12 +25,14 @@
     ]
   },
   "dependencies": {
+    "@prisma/client": "^2.14.0",
     "apollo-server": "^2.19.2",
     "graphql": "^15.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@prisma/cli": "^2.14.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^4.3.8",

@@ -12,7 +12,8 @@ const typeDefs = gql`
     content: String
     id: ID!
     published: Boolean!
-    title: String!					
+    title: String!
+    author: User					
   }
   type Query {
     feed: [Post!]!
